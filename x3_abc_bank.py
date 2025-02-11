@@ -83,7 +83,7 @@ paypal_payment = PayPalPayment("user@example.com")
 upi_payment = UpiPayment("user@upi")
 bank_payment = BankTransferPayment(9876543210, "SBIN0001234")
 
-checkout(cc_payment, 1000)  # Credit Card Payment
-checkout(paypal_payment, 500)  # PayPal Payment
-checkout(upi_payment, 250)  # UPI Payment
-checkout(bank_payment, 2000)  # Bank Transfer Payment
+checkout(cc_payment, 1000)
+checkout(paypal_payment, 500)
+checkout(upi_payment, 250)
+checkout(bank_payment, 2000)
