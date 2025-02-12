@@ -41,15 +41,19 @@ class BankAccount:
             )
         else:
             return "Incorrect PIN ❌"
+    def show_info(self):
+        """This will show the information of this user."""
+        name = self.account_holder.upper()
+        balance = self._balance  # Correct variable name
+        pin = self.__pin
+        print(f"Your Information is:\n"
+              f"Name: {name}\n"
+              f"Balance: ₹{balance}\n"
+              f"PIN: {pin}")
 
 
 a1 = BankAccount("Rahul Jana", 500)
 
 print(a1.get_balance("1234"))
 
-a1.deposit(999)
-
-print(a1.get_balance("1234"))
-
-a1.withdraw(7000, "1234")
-print(a1.get_balance("1234"))
+a1.show_info()
