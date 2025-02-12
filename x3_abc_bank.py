@@ -5,7 +5,7 @@ from datetime import datetime
 class PaymentMethod(ABC):
 
     @abstractmethod
-    def process_payment(self, amount: float):
+    def process_payment(self, amount: int | float):
         """This is the how the payment will process"""
         pass
 
@@ -37,7 +37,7 @@ class PayPalPayment(PaymentMethod):
 
         self.email = email
 
-    def process_payment(self, amount: float):
+    def process_payment(self, amount: int):
         print(f"Processing the payment of ₹{amount} from paypal...")
         print(f"Payment is using the email: {self.email.upper()}")
         print(f"Payment Successful 🍌")
